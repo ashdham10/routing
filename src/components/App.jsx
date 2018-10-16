@@ -8,9 +8,7 @@ import SingleMovies from './SingleMovies';
 import Person from './Person';
 
 class App extends React.Component {
-    constructor(props){
-        super(props);
-    }
+   
     render() {
         return (
             <Router>
