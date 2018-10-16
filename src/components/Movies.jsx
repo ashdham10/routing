@@ -24,7 +24,7 @@ class Movies extends Component {
         return this.state.films.map(film => {
             return (
                 <div className="row" key={film.id}>
-                    <div className="card col-3" >
+                    <div className="card col-3">
                         <div className="card-body">
                             <h5 className="card-title">{film.title}</h5>
                             <p className="card-text">Directed by {film.director}</p>

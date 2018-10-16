@@ -23,8 +23,8 @@ class People extends Component {
     render() {
         return this.state.people.map(person => {
             return (
-                <div className="row">
-                    <div className="card col-3" key={person.id}>
+                <div className="row" key={person.id}>
+                    <div className="card col-3">
                         <div className="card-body">
                             <h5 className="card-title">{person.name}</h5>
                             <Link to={`/People/${person.id}`} className="btn btn-primary">Person Info</Link>

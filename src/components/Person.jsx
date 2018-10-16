@@ -19,7 +19,7 @@ class Person extends React.Component {
 
     render() {
         return (
-            <div className="card" style={{ width: '18rem' }}>
+            <div className="card" style={{ width: '18rem' }} key={this.state.person.id}>
                 <div className="card-body">
                     <h5 className="card-title">Name: {this.state.person.name}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">Gender: {this.state.person.gender}</h6>

@@ -15,13 +15,13 @@ class App extends React.Component {
                 <React.Fragment>
                     <Header />
                     <Link to="/">
-                        <button style={{margin:'10px'}}>HOME PAGE</button>
+                        <button className="btn btn-primary" style={{margin:'10px'}}>HOME PAGE</button>
                     </Link>
                     <Link to="/Movies">
-                        <button style={{margin:'10px'}}>MOVIES PAGE</button>
+                        <button className="btn btn-primary" style={{margin:'10px'}}>MOVIES PAGE</button>
                     </Link>
                     <Link to="/People">
-                        <button style={{margin:'10px'}}>PEOPLE PAGE</button>
+                        <button className="btn btn-primary" style={{margin:'10px'}}>PEOPLE PAGE</button>
                     </Link>
                     <Switch>
                         <Route exact path="/" component={Home} />
