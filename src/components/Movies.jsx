@@ -22,14 +22,13 @@ class Movies extends Component {
 
     render() {
         return this.state.films.map(film => {
-           let {id} = props.film;
             return (
                 <div className="row" key={film.id}>
                     <div className="card col-3" >
                         <div className="card-body">
                             <h5 className="card-title">{film.title}</h5>
                             <p className="card-text">Directed by {film.director}</p>
-                            <Link to={`/Movies/${this.state.films.id}`} className="btn btn-primary">Movie Details</Link>
+                            <Link to={`/Movies/${film.id}`} className="btn btn-primary">Movie Details</Link>
                         </div>
                     </div>
                 </div>
