@@ -1,4 +1,4 @@
-import React, { Component }from 'react';
+import React, { Component } from 'react';
 
 class People extends Component {
     constructor(props) {
@@ -21,12 +21,17 @@ class People extends Component {
 
     render() {
         return this.state.people.map((person) => {
-                return (
-                    <div key={person.id}>
-                        <h5 className="text-center">{person.name}</h5>
+            return (
+                <div className="row">
+                    <div className="card col-3" key={person.id}>
+                        <div className="card-body">
+                            <h5 className="card-title">{person.name}</h5>
+                            <a href="#" className="btn btn-primary">Person Info</a>
+                        </div>
                     </div>
-                )
-            })
+                </div>
+            )
+        })
 
     }
 

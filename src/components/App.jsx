@@ -4,6 +4,7 @@ import Movies from './Movies';
 import People from './People';
 import Home from './Home';
 import Header from './Header';
+import SingleMovies from './SingleMovies';
 
 class App extends React.Component {
     constructor(props){
@@ -27,6 +28,7 @@ class App extends React.Component {
                         <Route exact path="/" component={Home} />
                         <Route exact path="/Movies" component={Movies} />
                         <Route exact path="/People" component={People} />
+                        <Route exact path="/Movies/:id" component={SingleMovies} />
                     </Switch>
                 </React.Fragment>
             </Router>

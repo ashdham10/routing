@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Movies extends Component {
     constructor(props) {
@@ -7,10 +8,6 @@ class Movies extends Component {
         this.state = {
             films: [],
         }
-    }
-
-    handleFilms(){
-        
     }
 
     componentDidMount() {
@@ -24,13 +21,21 @@ class Movies extends Component {
     }
 
     render() {
-        return this.state.films.map((film) => {
-                return (
-                    <div key={film.id}>
-                        <h5 onClick={this.handleFilms} className="text-center">{film.title}</h5>
+        return this.state.films.map(film => {
+           let {id} = props.film;
+            return (
+                <div className="row" key={film.id}>
+                    <div className="card col-3" >
+                        <div className="card-body">
+                            <h5 className="card-title">{film.title}</h5>
+                            <p className="card-text">Directed by {film.director}</p>
+                            <Link to={`/Movies/${this.state.films.id}`} className="btn btn-primary">Movie Details</Link>
+                        </div>
                     </div>
-                )
-            })
+                </div>
+
+            )
+        })
 
     }
 
